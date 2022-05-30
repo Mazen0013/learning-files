@@ -538,3 +538,300 @@ sets both the `align-content` and `justify-content` properties in a single decla
 - If the second value is omitted, the first value is assigned to both properties.
 
 ---
+
+## Properties for the Children (Grid Items) :
+
+1- Grid lines :
+
+```
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end
+```
+
+- Determines a grid item’s location within the grid by referring to specific grid lines.
+- `grid-column-start`/`grid-row-start` is the line where the item begins, and `grid-column-end`/`grid-row-end` is the line where the item ends.
+
+### syntax:
+
+```
+.item {
+  grid-column-start: <number> | <name> | span <number> | span <name> | auto;
+  grid-column-end: <number> | <name> | span <number> | span <name> | auto;
+  grid-row-start: <number> | <name> | span <number> | span <name> | auto;
+  grid-row-end: <number> | <name> | span <number> | span <name> | auto;
+}
+```
+
+### Values:
+
+`<line>` – can be a number to refer to a numbered grid line, or a name to refer to a named grid line
+
+`span <number>` – the item will span across the provided number of grid tracks
+
+`span <name>` – the item will span across until it hits the next line with the provided name
+
+`auto` – indicates auto-placement, an automatic span, or a default span of one
+
+### example:
+
+```
+.item-a {
+  grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+}
+```
+
+![pic](/images/grid-column-row-start-end-01.svg)
+
+```
+.item-b {
+  grid-column-start: 1;
+  grid-column-end: span col4-start;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+}
+```
+
+![pic](/images/grid-column-row-start-end-02.svg)
+
+- If no grid-column-end/grid-row-end is declared, the item will span 1 track by default.
+- Items can overlap each other. You can use z-index to control their stacking order.
+
+---
+
+### 2) `grid-column`, `grid-row` :
+
+- Shorthand for `grid-column-start` + `grid-column-end`, and `grid-row-start` + `grid-row-end`, respectively.
+
+### syntax:
+
+```.item {
+  grid-column: <start-line> / <end-line> | <start-line> / span <value>;
+  grid-row: <start-line> / <end-line> | <start-line> / span <value>;
+}
+```
+
+### values:
+
+- `<start-line>` / `<end-line>` – each one accepts all the same values as the longhand version, including span
+
+### examples:
+
+```
+.item-c {
+  grid-column: 3 / span 2;
+  grid-row: third-line / 4;
+}
+```
+
+![pic](/images/grid-column-row.svg)
+
+---
+
+### 3) `grid-area` :
+
+- Gives an item a name so that it can be referenced by a template created with the `grid-template-areas` property.
+- Alternatively, this property can be used as an even shorter shorthand for `grid-row-start` + `grid-column-start` + `grid-row-end` + `grid-column-end`.
+
+### syntax:
+
+```
+.item {
+  grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>;
+}
+```
+
+### values:
+
+`<name>` – a name of your choosing
+`<row-start>` / `<column-start>` / `<row-end>` / `<column-end>` – can be numbers or named lines
+
+### examples:
+
+- As a way to assign a name to the item:
+
+```
+.item-d {
+  grid-area: header;
+}
+```
+
+- As the short-shorthand for `grid-row-start` + `grid-column-start` + `grid-row-end` + `grid-column-end`:
+
+```
+.item-d {
+  grid-area: 1 / col4-start / last-line / 6;
+}
+```
+
+![pic](/images/grid-area.svg)
+
+---
+
+### 4) `justify-self` :
+
+- Aligns a grid item inside a cell along the inline (row) axis (as opposed to `align-self` which aligns along the block (column) axis).
+- This value applies to a grid item inside a single cell.
+
+### syntax:
+
+```
+.item {
+  justify-self: start | end | center | stretch;
+}
+```
+
+### values:
+
+`start` – aligns the grid item to be flush with the start edge of the cell
+
+`end` – aligns the grid item to be flush with the end edge of the cell
+
+`center` – aligns the grid item in the center of the cell
+
+`stretch` – fills the whole width of the cell (this is the default)
+
+### examples:
+
+```
+.item-a {
+  justify-self: start;
+}
+```
+
+![pic](/images/justify-self-start.svg)
+
+```
+.item-a {
+  justify-self: stretch;
+}
+```
+
+![pic](/images/justify-self-stretch.svg)
+
+---
+
+### 5) `align-self` :
+
+- Aligns a grid item inside a cell along the block (column) axis (as opposed to `justify-self` which aligns along the inline (row) axis).
+- This value applies to the content inside a single grid item.
+
+### syntax:
+
+```
+.item {
+  align-self: start | end | center | stretch;
+}
+```
+
+### values:
+
+`start` – aligns the grid item to be flush with the start edge of the cell
+
+`end` – aligns the grid item to be flush with the end edge of the cell
+
+`center` – aligns the grid item in the center of the cell
+
+`stretch` – fills the whole height of the cell (this is the default)
+
+### examples:
+
+```
+.item-a {
+  align-self: start;
+}
+```
+
+![pic](/images/align-self-start.svg)
+
+```
+.item-a {
+  align-self: end;
+}
+```
+
+![pic](/images/align-self-end.svg)
+
+---
+
+### 6) `place-self` :
+
+`place-self` sets both the `align-self` and `justify-self` properties in a single declaration.
+
+### syntax:
+
+```
+.item-a {
+  place-self: center;
+}
+```
+
+### values:
+
+`auto` – The “default” alignment for the layout mode.
+
+`<align-self>` / `<justify-self>` – The first value sets `align-self`, the second value `justify-self`. If the second value is omitted, the first value is assigned to both properties.
+
+### examples:
+
+```
+.item-a {
+  place-self: center;
+}
+```
+
+![pic](/images/place-self-center.svg)
+
+```
+.item-a {
+  place-self: center stretch;
+}
+```
+
+![pic](/images/place-self-center-stretch.svg)
+
+---
+
+## Grid functions:
+
+### 1) `repeat` :
+
+The `repeat()` CSS function represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
+
+- This is useful for grids with items with equal sizes or many items.
+- The `repeat()` notation accepts 2 arguments: the first represents the number of times the defined tracks should repeat, and the second is the track definition.
+
+```
+grid-template-rows:    repeat(4, 100px);
+grid-template-columns: repeat(3, 1fr);
+```
+
+otherwise the above example would look like this:
+
+```
+grid-template-rows:    100px 100px 100px 100px;
+grid-template-columns:  1fr 1fr 1fr;
+```
+
+---
+
+### 2) `minmax()` :
+
+- This function means that you can set a minimum and a maximum size for a track.
+- The `minmax()` function accepts 2 arguments: the first is the minimum size of the track and the second the maximum size.
+- Alongside length values, the values can also be auto, which allows the track to grow/stretch based on the size of the content.
+
+```
+grid-template-rows:    minmax(100px, auto);
+grid-template-columns: minmax(auto, 50%) 1fr 3em;
+```
+
+In this example, the first row track is set to have a minimum height of `100px`, but its maximum size of `auto` will allow the row track to grow it the content is taller than 100px.
+
+The first column track has a minimum size of `auto`, but its maximum size of `50%` will prevent it from getting no wider than 50% of the grid container width.
+
+---
