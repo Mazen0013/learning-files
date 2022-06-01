@@ -211,7 +211,7 @@ It is only possible to add animation ttransitions to elements that have a "_midd
 
 - For example, it's impossible to add transitions for `font-family`, because it's unclear what the "middle state" between `serif` and `monospace` should look like. On the other hand, it is possible to add transitions for `font-size` because its unit is a length that can be interpolated between.
 
-![pic](/transition/images/middlestate.webp)
+![pic](transition/images/middlestate.webp)
 
 ---
 
@@ -281,7 +281,7 @@ transform: none|(transform-functions)|initial|inherit;
 
 `inherit` Inherits this property from its parent element.
 
-![pic](/transition/images/translate-rotate-scale-skew-demo.webp)
+![pic](transition/images/translate-rotate-scale-skew-demo.webp)
 
 ### examples:
 
