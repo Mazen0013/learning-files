@@ -35,25 +35,25 @@ The children (i.e. direct descendants) of the grid container.
 ### 3- Grid `Lines`:
 
 The dividing lines that make up the structure of the grid. They can be either vertical (_“column grid lines”_) or horizontal (_“row grid lines”_).
-![pic](/images/terms-grid-line.svg)
+![pic](images/terms-grid-line.svg)
 
 ### 4- Grid `Cell`:
 
 The space between two adjacent row and two adjacent column grid lines.
 
-![pic](/images/terms-grid-cell.svg)
+![pic](images/terms-grid-cell.svg)
 
 ### 5- Grid `Track`:
 
 the columns or rows of the grid.
 
-![pic](/images/terms-grid-track.svg)
+![pic](images/terms-grid-track.svg)
 
 ### Grid `Area`:
 
 The total space surrounded by four grid lines. A grid area may be composed of any number of grid cells.
 
-![pic](/images/terms-grid-area.svg)
+![pic](images/terms-grid-area.svg)
 
 # Grid Properties:
 
@@ -209,7 +209,7 @@ example:
 
 That’ll create a grid that’s four columns wide by three rows tall. The entire top row will be composed of the header area. The middle row will be composed of two main areas, one empty cell, and one sidebar area. The last row is all footer.
 
-![pic](/images/template-areas.svg)
+![pic](images/template-areas.svg)
 
 ---
 
@@ -288,7 +288,7 @@ or like this using the shorthand property:
 
 that would look like this:
 
-![pic](/images/gap.svg)
+![pic](images/gap.svg)
 
 The gutters are only created between the columns/rows, not on the outer edges.
 
@@ -325,7 +325,7 @@ examples:
 }
 ```
 
-![pic](/images/justify-items-start.svg)
+![pic](images/justify-items-start.svg)
 
 ```
 .container {
@@ -333,7 +333,7 @@ examples:
 }
 ```
 
-![pic](/images/justify-items-stretch.svg)
+![pic](images/justify-items-stretch.svg)
 
 ---
 
@@ -369,7 +369,7 @@ examples:
 }
 ```
 
-![pic](/images/align-items-start.svg)
+![pic](images/align-items-start.svg)
 
 ```
 .container {
@@ -377,7 +377,7 @@ examples:
 }
 ```
 
-![pic](/images/align-items-center.svg)
+![pic](images/align-items-center.svg)
 
 ```
 .container {
@@ -385,7 +385,7 @@ examples:
 }
 ```
 
-![pic](/images/align-items-stretch.svg)
+![pic](images/align-items-stretch.svg)
 
 -This behavior can also be set on individual grid items via the `align-self` property.
 
@@ -444,7 +444,7 @@ examples:
 }
 ```
 
-![pic](/images/justify-content-start.svg)
+![pic](images/justify-content-start.svg)
 
 ```
 .container {
@@ -452,7 +452,7 @@ examples:
 }
 ```
 
-![pic](/images/justify-content-space-around.svg)
+![pic](images/justify-content-space-around.svg)
 
 ```
 .container {
@@ -460,7 +460,7 @@ examples:
 }
 ```
 
-![pic](/images/justify-content-space-between.svg)
+![pic](images/justify-content-space-between.svg)
 
 ```
 .container {
@@ -468,7 +468,7 @@ examples:
 }
 ```
 
-![pic](/images/justify-content-space-evenly.svg)
+![pic](images/justify-content-space-evenly.svg)
 
 ---
 
@@ -510,7 +510,7 @@ in the same case that the total size of your grid is less than the size of its g
 }
 ```
 
-![pic](/images/align-content-start.svg)
+![pic](images/align-content-start.svg)
 
 ```
 .container {
@@ -518,7 +518,7 @@ in the same case that the total size of your grid is less than the size of its g
 }
 ```
 
-![pic](/images/align-content-center.svg)
+![pic](images/align-content-center.svg)
 
 ```
 .container {
@@ -526,7 +526,7 @@ in the same case that the total size of your grid is less than the size of its g
 }
 ```
 
-![pic](/images/align-content-space-around.svg)
+![pic](images/align-content-space-around.svg)
 
 ---
 
@@ -585,7 +585,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/grid-column-row-start-end-01.svg)
+![pic](images/grid-column-row-start-end-01.svg)
 
 ```
 .item-b {
@@ -596,7 +596,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/grid-column-row-start-end-02.svg)
+![pic](images/grid-column-row-start-end-02.svg)
 
 - If no grid-column-end/grid-row-end is declared, the item will span 1 track by default.
 - Items can overlap each other. You can use z-index to control their stacking order.
@@ -628,7 +628,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/grid-column-row.svg)
+![pic](images/grid-column-row.svg)
 
 ---
 
@@ -668,7 +668,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/grid-area.svg)
+![pic](images/grid-area.svg)
 
 ---
 
@@ -703,7 +703,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/justify-self-start.svg)
+![pic](images/justify-self-start.svg)
 
 ```
 .item-a {
@@ -711,7 +711,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/justify-self-stretch.svg)
+![pic](images/justify-self-stretch.svg)
 
 ---
 
@@ -746,7 +746,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/align-self-start.svg)
+![pic](images/align-self-start.svg)
 
 ```
 .item-a {
@@ -754,7 +754,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/align-self-end.svg)
+![pic](images/align-self-end.svg)
 
 ---
 
@@ -784,7 +784,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/place-self-center.svg)
+![pic](images/place-self-center.svg)
 
 ```
 .item-a {
@@ -792,7 +792,7 @@ grid-row-end
 }
 ```
 
-![pic](/images/place-self-center-stretch.svg)
+![pic](images/place-self-center-stretch.svg)
 
 ---
 
