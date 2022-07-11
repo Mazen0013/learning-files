@@ -30,7 +30,7 @@ Conditional statements control behavior in JavaScript and determine whether or n
 
 output:
 
-    "if Block"
+    if Block
 
 Here’s what’s happening in the example above:
 
@@ -68,7 +68,7 @@ Here’s what’s happening in the example above:
 
 output:
 
-    "else block"
+    else block
 
 In the example above, "cat" and "dog" are not equal, so the else block runs and the variable outcome gets the value "else block".
 
@@ -116,7 +116,7 @@ In the example above, "cat" and "dog" are not equal, so the else block runs and 
 
 output:
 
-      "adult"
+      adult
 
 You can use multiple _if else_ conditionals, but note that JavaScript skips any remaining conditionals after it runs the first one that passes.
 
@@ -179,7 +179,7 @@ What is happening in the example above is that the _switch_ statement will evalu
 
 output:
 
-    "Please select another flower"
+    Please select another flower
 
 ### _The default Keyword:_
 
@@ -280,7 +280,7 @@ But you can't use score > 50 as a condition for a _case_ clause.
 
 output:
 
-    "the if statement is true"
+    the if statement is true
 
 the same example with nested if .. else statement would be:
 
@@ -319,7 +319,7 @@ the same example with nested if .. else statement would be:
 
 output:
 
-    "is allowed to enter the store"
+    is allowed to enter the store
 
 ---
 
@@ -354,7 +354,7 @@ The condition goes before the ? mark and if it is true, then the code between th
 
 output:
 
-     "Can vote"
+     Can vote
 
 This is what the code would look like using an if else statement:
 
